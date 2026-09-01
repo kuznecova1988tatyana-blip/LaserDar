@@ -27,7 +27,6 @@
         body { font-family: var(--font-primary); background: var(--bg); color: var(--text); line-height: 1.6; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         
-        /* НАВИГАЦИЯ */
         .nav-bar { background: #111; padding: 15px 0; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
         .nav-bar .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
         .nav-logo { font-size: 2rem; font-weight: 700; color: var(--text-dark); text-decoration: none; letter-spacing: 3px; cursor: pointer; }
@@ -36,66 +35,36 @@
         .nav-links a { color: var(--text); text-decoration: none; font-size: 0.9rem; font-weight: 500; padding: 5px 10px; border-radius: 5px; transition: 0.3s; cursor: pointer; }
         .nav-links a:hover { color: var(--primary-light); background: var(--bg-light); }
         
-        /* БАННЕР */
-.hero-banner { width: 100%; aspect-ratio: 1920/768; overflow: hidden; }
-.hero-banner img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .hero-banner { width: 100%; aspect-ratio: 1920/768; overflow: hidden; }
+        .hero-banner img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .hero { text-align: center; }
-.hero h1 { font-size: 3rem; color: var(--text-dark); margin-bottom: 15px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
-.hero p { font-size: 1.1rem; color: var(--text-light); max-width: 700px; margin-left: auto; margin-right: auto; margin-bottom: 25px; font-weight: 300; }
-.hero .motto { display: inline-block; margin-left: auto; margin-right: auto; }
-        .hero .motto { display: inline-block; background: var(--bg-card); padding: 12px 30px; border-radius: 30px; color: var(--primary-light); font-style: italic; border: 1px solid var(--border); }
-        .btn { display: inline-block; padding: 15px 35px; background: var(--primary); color: white; text-decoration: none; border-radius: 30px; font-weight: 600; margin-top: 20px; transition: 0.3s; cursor: pointer; border: none; font-family: var(--font-primary); font-size: 1rem; }
-        .btn:hover { background: var(--primary-light); }
+        .hero h1 { font-size: 3rem; color: var(--text-dark); margin-bottom: 15px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+        .hero p { font-size: 1.1rem; color: var(--text-light); max-width: 700px; margin-left: auto; margin-right: auto; margin-bottom: 25px; font-weight: 300; }
         
-        /* СЕКЦИИ */
         section { padding: 60px 0; }
         section h2 { text-align: center; font-size: 2.5rem; margin-bottom: 15px; color: var(--text-dark); font-weight: 700; }
         section h2::after { content: ''; display: block; width: 80px; height: 3px; background: var(--primary); margin: 15px auto 0; border-radius: 2px; }
         .section-desc { text-align: center; color: var(--text-light); margin-bottom: 40px; font-weight: 300; }
         
-        /* ГАЛЕРЕЯ */
         .gallery-tabs { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 35px; }
         .gallery-tab { font-family: var(--font-primary); padding: 12px 25px; border: 2px solid var(--primary); border-radius: 30px; cursor: pointer; background: transparent; color: var(--primary-light); font-size: 0.95rem; font-weight: 500; transition: all 0.3s; }
         .gallery-tab:hover, .gallery-tab.active { background: var(--primary); color: white; border-color: var(--primary); }
         .gallery-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; }
         .gallery-item { position: relative; overflow: hidden; border-radius: 12px; aspect-ratio: 1; background: var(--bg-card); border: 2px dashed var(--border); display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
-/* Для раздела "Процесс работы" */
-#process .gallery-grid { 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    gap: 0; 
-}
-#process .gallery-item { 
-    width: 100%; 
-    max-width: 400px; 
-    aspect-ratio: 9/16; 
-    border: none; 
-    background: transparent; 
-}
-#process .gallery-item video { 
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    border-radius: 12px; 
-}
+        #process .gallery-grid { display: flex; justify-content: center; align-items: center; gap: 0; }
+        #process .gallery-item { width: 100%; max-width: 400px; aspect-ratio: 9/16; border: none; background: transparent; }
+        #process .gallery-item video { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
         .gallery-item:hover { border-color: var(--primary); }
-        .gallery-item .placeholder { text-align: center; color: var(--text-light); font-size: 2rem; }
-        .gallery-item .placeholder small { font-size: 0.75rem; color: #666; display: block; }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
         .gallery-category { display: none; }
         .gallery-category.active { display: grid; }
+        #process.active { display: flex; justify-content: center; }
         
-        /* О НАС */
         .about-section { background: var(--bg-light); }
         .about-content { max-width: 800px; margin: 0 auto; text-align: left; }
         .about-content p { color: var(--text-light); margin-bottom: 20px; font-weight: 300; line-height: 1.8; }
-        .about-content ul { list-style: none; margin-bottom: 20px; }
-        .about-content ul li { padding: 5px 0; color: var(--text-light); font-weight: 300; }
-        .about-content ul li::before { content: '◆ '; color: var(--primary); }
         .about-highlight { color: var(--primary-light); font-weight: 500; }
         
-        /* ГЕНЕРАТОРЫ */
         .generators-section { background: var(--bg-light); }
         .generators-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
         .generator-card { background: var(--bg-card); padding: 25px; border-radius: 15px; text-align: center; box-shadow: var(--shadow); border: 1px solid var(--border); cursor: pointer; transition: all 0.3s; }
@@ -104,10 +73,9 @@
         .generator-card h3 { color: var(--text-dark); font-size: 1.1rem; margin-bottom: 5px; font-weight: 600; }
         .generator-card p { color: var(--text-light); font-size: 0.8rem; }
         
-        /* КОНТАКТЫ */
         .contacts-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
         .contact-link { display: block; text-decoration: none; margin-bottom: 15px; }
-        .contact-item { background: var(--bg-card); padding: 20px; border-radius: 12px; border: 1px solid var(--border); box-shadow: var(--shadow); display: flex; align-items: center; gap: 15px; color: var(--text); transition: all 0.3s; pointer-events: none; }
+        .contact-item { background: var(--bg-card); padding: 20px; border-radius: 12px; border: 1px solid var(--border); box-shadow: var(--shadow); display: flex; align-items: center; gap: 15px; color: var(--text); transition: all 0.3s; }
         .contact-link:hover .contact-item { border-color: var(--primary); transform: translateX(5px); }
         .contact-item .icon { font-size: 2rem; }
         .contact-item h3 { color: var(--text-dark); font-size: 1rem; }
@@ -128,7 +96,6 @@
         .footer-col a:hover { color: var(--primary-light); }
         .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid var(--border); color: #999; font-size: 0.85rem; }
         
-        /* МОДАЛЬНЫЕ ОКНА */
         .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; align-items: center; justify-content: center; }
         .modal.active { display: flex; }
         .modal-content { background: var(--bg-card); padding: 30px; border-radius: 15px; max-width: 500px; width: 90%; max-height: 90vh; overflow-y: auto; border: 1px solid var(--border); }
@@ -156,7 +123,6 @@
 </head>
 <body>
 
-    <!-- НАВИГАЦИЯ -->
     <nav class="nav-bar">
         <div class="container">
             <a class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">LASER<span>DAR</span></a>
@@ -169,24 +135,17 @@
         </div>
     </nav>
 
-    <!-- БАННЕР -->
     <div class="hero-banner">
-        <!-- 📸 ЗАМЕНИТЕ НА СВОЙ БАННЕР -->
         <img src="images/banner_vk.jpg" alt="LaserDar">
     </div>
 
-    <!-- ГЛАВНЫЙ ЭКРАН -->
     <div class="hero">
         <div class="container">
             <h1>Лазерная гравировка и резка</h1>
             <p>Создаём уникальные вещи, которые дарят эмоции и хранят память.<br>Ваша история — в деталях.</p>
-           <!-- <div class="motto">✨ «Маленькие вещи могут иметь большое значение»</div>
-            <br>
-            <button class="btn" onclick="document.getElementById('gallery').scrollIntoView({behavior:'smooth'})">Смотреть галерею</button> -->
         </div>
     </div>
 
-    <!-- ГАЛЕРЕЯ -->
     <section id="gallery">
         <div class="container">
             <h2>Галерея работ</h2>
@@ -244,389 +203,90 @@
                 </div>
             </div>
 
-        <!-- ПРОЦЕСС РАБОТЫ -->
-<div class="gallery-category" id="process">
-    <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
-        <div style="width: 100%; max-width: 400px; aspect-ratio: 9/16; border-radius: 12px; overflow: hidden;">
-            <video src="images/process_1.mp4" controls playsinline style="width:100%;height:100%;object-fit:cover;"></video>
+            <div class="gallery-category" id="process">
+                <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+                    <div style="width: 100%; max-width: 400px; aspect-ratio: 9/16; border-radius: 12px; overflow: hidden;">
+                        <video src="images/process_1.mp4" controls playsinline style="width:100%;height:100%;object-fit:cover;"></video>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-</div>
     </section>
 
-   <!-- О НАС -->
-<section id="about" class="about-section">
-    <div class="container">
-        <h2>О нас</h2>
-        <p class="section-desc">История мастерской</p>
-        <div class="about-content">
-            <p style="text-align:center; font-style:italic; color:var(--primary-light); font-size:1.3rem; margin-bottom:30px;">«Маленькие вещи могут иметь большое значение»</p>
-            
-            <p>Мы создаём небольшие сувениры и изделия с гравировкой — для подарка, на память или просто для себя. Работаем небольшими партиями и принимаем индивидуальные заказы.</p>
-            
-            <p>Начинали с лазерной гравировки и изготовления сувенирной продукции. Сегодня основное направление — гравировка на металлических изделиях: брелоках, жетонах, подвесках и других заготовках. Постепенно развиваем направление 3D-печати и создаём новые изделия собственного дизайна.</p>
-            
-            <p>С <span class="about-highlight">2022 года</span> работает наш магазин на Ozon. За это время мы получили отзывы от покупателей, которые действительно приобретали наши изделия. Все отзывы честные и оставлены после реальных заказов.</p>
-            
-            <p>Для нас важно не просто изготовить вещь, а сделать её такой, которую приятно получить и которой хочется пользоваться. Поэтому внимательно относимся к материалам, качеству изготовления, оформлению и упаковке каждого заказа.</p>
-        </div>
-    </div>
-</section>
-
-<!-- ГЕНЕРАТОРЫ -->
-<section id="generators" class="generators-section">
-    <div class="container">
-        <h2>Генераторы для гравировки</h2>
-        <p class="section-desc">Подготовьте текст перед заказом</p>
-        <div class="generators-grid">
-            <div class="generator-card" onclick="openGenerator('morse')">
-                <div class="generator-icon">📡</div>
-                <h3>Азбука Морзе</h3>
-                <p>Текст в точки и тире</p>
-            </div>
-            <div class="generator-card" onclick="openGenerator('qr')">
-                <div class="generator-icon">📱</div>
-                <h3>QR-код</h3>
-                <p>Из ссылки или текста</p>
-            </div>
-            <div class="generator-card" onclick="openGenerator('initials')">
-                <div class="generator-icon">✒️</div>
-                <h3>Инициалы</h3>
-                <p>Монограмма</p>
-            </div>
-            <div class="generator-card" onclick="openGenerator('ideas')">
-                <div class="generator-icon">💡</div>
-                <h3>Идеи надписей</h3>
-                <p>По настроению</p>
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>О нас</h2>
+            <p class="section-desc">История мастерской</p>
+            <div class="about-content">
+                <p style="text-align:center; font-style:italic; color:var(--primary-light); font-size:1.3rem; margin-bottom:30px;">«Маленькие вещи могут иметь большое значение»</p>
+                <p>Мы создаём небольшие сувениры и изделия с гравировкой — для подарка, на память или просто для себя. Работаем небольшими партиями и принимаем индивидуальные заказы.</p>
+                <p>Начинали с лазерной гравировки и изготовления сувенирной продукции. Сегодня основное направление — гравировка на металлических изделиях: брелоках, жетонах, подвесках и других заготовках. Постепенно развиваем направление 3D-печати и создаём новые изделия собственного дизайна.</p>
+                <p>С <span class="about-highlight">2022 года</span> работает наш магазин на Ozon. За это время мы получили отзывы от покупателей, которые действительно приобретали наши изделия. Все отзывы честные и оставлены после реальных заказов.</p>
+                <p>Для нас важно не просто изготовить вещь, а сделать её такой, которую приятно получить и которой хочется пользоваться. Поэтому внимательно относимся к материалам, качеству изготовления, оформлению и упаковке каждого заказа.</p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- МОДАЛЬНОЕ ОКНО -->
-<div class="modal" id="generatorModal">
-    <div class="modal-content">
-        <h3 id="modalTitle">Генератор</h3>
-        <div id="modalBody"></div>
-        <div class="modal-result" id="modalResult" style="display:none;"></div>
-        <button onclick="closeGenerator()" class="close-btn">Закрыть</button>
-    </div>
-</div>
+    <section id="generators" class="generators-section">
+        <div class="container">
+            <h2>Генераторы для гравировки</h2>
+            <p class="section-desc">Подготовьте текст перед заказом</p>
+            <div class="generators-grid">
+                <div class="generator-card" onclick="openGenerator('morse')">
+                    <div class="generator-icon">📡</div>
+                    <h3>Азбука Морзе</h3>
+                    <p>Текст в точки и тире</p>
+                </div>
+                <div class="generator-card" onclick="openGenerator('qr')">
+                    <div class="generator-icon">📱</div>
+                    <h3>QR-код</h3>
+                    <p>Из ссылки или текста</p>
+                </div>
+                <div class="generator-card" onclick="openGenerator('initials')">
+                    <div class="generator-icon">✒️</div>
+                    <h3>Инициалы</h3>
+                    <p>Монограмма</p>
+                </div>
+                <div class="generator-card" onclick="openGenerator('ideas')">
+                    <div class="generator-icon">💡</div>
+                    <h3>Идеи надписей</h3>
+                    <p>По настроению</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script>
-function openGenerator(type) {
-    var modal = document.getElementById('generatorModal');
-    var title = document.getElementById('modalTitle');
-    var body = document.getElementById('modalBody');
-    var result = document.getElementById('modalResult');
-    result.style.display = 'none';
-    result.innerHTML = '';
-    
-    if (type === 'morse') {
-        title.textContent = '📡 Азбука Морзе';
-        body.innerHTML = '<p style="margin-bottom:15px;">Введите текст:</p><input type="text" id="morseInput" placeholder="Например: Привет" onkeyup="generateMorse()">';
-    } else if (type === 'qr') {
-        title.textContent = '📱 QR-код';
-        body.innerHTML = '<p style="margin-bottom:15px;">Введите ссылку или текст:</p><input type="text" id="qrInput" placeholder="https://..."><br><button onclick="generateQR()">Создать QR-код</button>';
-    } else if (type === 'initials') {
-        title.textContent = '✒️ Инициалы';
-        body.innerHTML = '<p style="margin-bottom:15px;">Введите имя и фамилию:</p><input type="text" id="initialsInput" placeholder="Иван Петров"><br><button onclick="generateInitials()">Создать</button>';
-    } else if (type === 'ideas') {
-        title.textContent = '💡 Идеи надписей';
-        body.innerHTML = '<p style="margin-bottom:15px;">Выберите настроение:</p><select id="ideasMood"><option value="love">❤️ Любовь</option><option value="family">👨‍👩‍👧 Семья</option><option value="friendship">🤝 Дружба</option><option value="motivation">🔥 Мотивация</option><option value="memory">🕊️ Память</option><option value="humor">😄 Юмор</option></select><br><button onclick="generateIdeas()">Сгенерировать</button>';
-    }
-    modal.classList.add('active');
-}
-
-function closeGenerator() {
-    document.getElementById('generatorModal').classList.remove('active');
-}
-
-function generateMorse() {
-    var text = document.getElementById('morseInput').value.toUpperCase();
-    var morse = {'А':'.-','Б':'-...','В':'.--','Г':'--.','Д':'-..','Е':'.','Ж':'...-','З':'--..','И':'..','Й':'.---','К':'-.-','Л':'.-..','М':'--','Н':'-.','О':'---','П':'.--.','Р':'.-.','С':'...','Т':'-','У':'..-','Ф':'..-.','Х':'....','Ц':'-.-.','Ч':'---.','Ш':'----','Щ':'--.-','Ъ':'--.--','Ы':'-.--','Ь':'-..-','Э':'..-..','Ю':'..--','Я':'.-.-','A':'.-','B':'-...','C':'-.-.','D':'-..','E':'.','F':'..-.','G':'--.','H':'....','I':'..','J':'.---','K':'-.-','L':'.-..','M':'--','N':'-.','O':'---','P':'.--.','Q':'--.-','R':'.-.','S':'...','T':'-','U':'..-','V':'...-','W':'.--','X':'-..-','Y':'-.--','Z':'--..','0':'-----','1':'.----','2':'..---','3':'...--','4':'....-','5':'.....','6':'-....','7':'--...','8':'---..','9':'----.',' ':' / '};
-    var resultText = '';
-    for (var i = 0; i < text.length; i++) {
-        resultText += (morse[text[i]] || text[i]) + ' ';
-    }
-    var result = document.getElementById('modalResult');
-    if (text) {
-        result.innerHTML = '<p style="font-size:1.3rem;letter-spacing:2px;color:var(--primary-light);">' + resultText.trim() + '</p>';
-        result.style.display = 'block';
-    } else {
-        result.style.display = 'none';
-    }
-}
-
-function generateQR() {
-    var text = document.getElementById('qrInput').value;
-    if (!text) { alert('Введите текст или ссылку'); return; }
-    var result = document.getElementById('modalResult');
-    result.innerHTML = '<img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=' + encodeURIComponent(text) + '" style="background:white;padding:10px;border-radius:8px;max-width:100%;">';
-    result.style.display = 'block';
-}
-
-function generateInitials() {
-    var name = document.getElementById('initialsInput').value.trim();
-    if (!name) { alert('Введите имя'); return; }
-    var parts = name.split(/\s+/).filter(function(p) { return p; });
-    var initials = '';
-    parts.forEach(function(p) { initials += p[0].toUpperCase(); });
-    var abbreviation = initials.split('').join('.') + '.';
-    var result = document.getElementById('modalResult');
-    result.innerHTML = '<p style="font-family:\'Great Vibes\',cursive;font-size:3.5rem;color:var(--primary-light);line-height:1.2;">' + initials + '</p><p style="font-family:\'Playfair Display\',serif;font-size:2rem;letter-spacing:5px;color:var(--text-dark);margin-top:15px;">' + abbreviation + '</p>';
-    result.style.display = 'block';
-}
-
-function generateIdeas() {
-    var mood = document.getElementById('ideasMood').value;
-    var result = document.getElementById('modalResult');
-    
-    var ideas = {
-        love: [
-            'Навсегда',
-            'Ты и я',
-            'Люблю тебя',
-            'Вместе навсегда',
-            'Моя половинка',
-            'Сердце моё',
-            'Навеки твой(я)',
-            'Ты — моё всё',
-            'Моё сердце принадлежит тебе',
-            'Две души — одно сердце',
-            'Настоящая любовь',
-            'Люблю, чту, берегу',
-            'Ты — моя жизнь',
-            'Расстояние бессильно',
-            'Я всегда рядом',
-            'Моя любовь всегда с тобой'
-        ],
-        family: [
-            'Семья — это всё',
-            'Мой дом',
-            'Мама и папа',
-            'Родные люди',
-            'Семейные узы',
-            'Дом там, где семья',
-            'Наша крепость',
-            'Семья — моя опора',
-            'Любовь и забота нашей семьи',
-            'С семьёй всё по плечу',
-            'Наши традиции — наша сила',
-            'В кругу самых близких',
-            'Сердце семьи бьётся в унисон',
-            'Семья — это мы',
-            'Тёплые моменты с родными',
-            'Моя семья — моя гордость',
-            'Рука об руку сквозь годы'
-        ],
-        friendship: [
-            'Лучшие друзья',
-            'Дружба навек',
-            'Мой друг',
-            'Вместе навсегда',
-            'Не разлей вода',
-            'Спасибо, что ты есть',
-            'Друзья — это семья'
-        ],
-        motivation: [
-            'Ты справишься',
-            'Действуй прямо сейчас',
-            'Маленькие шаги — большой результат',
-            'Верь в себя',
-            'Сегодня — лучший день',
-            'Ты сильнее, чем думаешь',
-            'Двигайся вперёд',
-            'Не бойся пробовать',
-            'Каждый день — шанс',
-            'Ты на верном пути',
-            'Сделай первый шаг',
-            'Всё получится',
-            'Не сдавайся никогда',
-            'Ты уже ближе к цели',
-            'Время действовать',
-            'Твой прогресс важен',
-            'Ты можешь больше',
-            'Вдох, выдох, действуй',
-            'Сегодня будет лучше',
-            'Ты — автор своей истории',
-            'Стань лучшей версией себя',
-            'Преграды — это опыт',
-            'Ты достоин успеха',
-            'Иди, пока горит огонь',
-            'Мечты становятся реальностью',
-            'Начни с малого',
-            'Ты уже делаешь достаточно',
-            'Победа начинается с шага',
-            'Не оглядывайся назад',
-            'Сила — в постоянстве',
-            'Ты не один',
-            'Сегодня — твой день',
-            'Доверься процессу',
-            'Рост требует смелости',
-            'Ты создаёшь своё будущее',
-            'Не сравнивай свой старт с чужой серединой',
-            'Твоя энергия — твоя сила',
-            'Продолжай, даже если трудно',
-            'Ты уже победил, начав',
-            'Пусть действия говорят громче слов',
-            'Каждый день — новая возможность',
-            'Ты умеешь преодолевать',
-            'Держи фокус на цели',
-            'Трудности делают сильнее',
-            'Верь, даже когда страшно',
-            'Ты способен на большее',
-            'Не жди идеального момента',
-            'Твой путь уникален',
-            'Делай, а не думай бесконечно',
-            'Ты заслуживаешь счастья',
-            'Прогресс — это движение',
-            'Будь добрее к себе',
-            'Сегодня ты ближе, чем вчера',
-            'Сила в твоих руках',
-            'Не позволяй страху решать',
-            'Ты — главный герой своей жизни',
-            'Маленькие победы важны',
-            'Действуй, пока есть желание',
-            'Ты меняешь мир вокруг',
-            'Верь в свой путь',
-            'Не останавливайся на полпути',
-            'Ты — источник своей силы',
-            'Каждый день — новый шанс',
-            'Смелость — это действие',
-            'Ты уже на пути к успеху',
-            'Пусть каждый шаг будет осознанным',
-            'Ты можешь всё, что задумал',
-            'Не бойся ошибаться',
-            'Твоя история только начинается',
-            'Двигайся, даже если медленно',
-            'Ты сильнее своих сомнений',
-            'Верь в свои возможности',
-            'Сегодня — день возможностей',
-            'Ты строишь своё будущее',
-            'Не теряй веру в себя',
-            'Каждый шаг — это победа',
-            'Ты достоин всего лучшего',
-            'Пусть мечты ведут вперёд',
-            'Ты можешь это сделать',
-            'Не смотри на чужие темпы',
-            'Твоя сила — в упорстве',
-            'Сегодня ты становишься лучше',
-            'Верь в свою уникальность',
-            'Ты ближе к мечте',
-            'Не бойся перемен',
-            'Ты создаёшь свою реальность',
-            'Пусть каждый день будет шагом вперёд',
-            'Ты — твоё главное достижение',
-            'Не откладывай жизнь на потом',
-            'Ты умеешь справляться',
-            'Верь в свой потенциал',
-            'Сегодня — время начать',
-            'Ты делаешь мир ярче',
-            'Не сравнивай себя с другими',
-            'Твоя сила — в действии',
-            'Ты заслуживаешь успеха',
-            'Пусть каждый день приносит рост',
-            'Ты можешь преодолеть всё',
-            'Верь в свой свет',
-            'Ты — на правильном пути'
-        ],
-        memory: [
-            'Помню и люблю',
-            'Навсегда в сердце',
-            'Ты всегда со мной',
-            'Не забывай меня',
-            'В сердце навсегда'
-        ],
-        humor: [
-            'Гравировка — это навсегда',
-            'Не теряй меня',
-            'Я же говорил(а)',
-            'Лучший(ая) в мире',
-            'Сделано с любовью',
-            'Не суди строго',
-            'Это всё моё',
-            'Без кофе — не человек',
-            'Тише, я думаю!',
-            'Официально в отпуске',
-            'Мастер неловких пауз',
-            'Уровень терпения: почти ноль',
-            'Здесь был и ушёл',
-            'Осторожно: ворчу, но люблю',
-            'Режим энергосбережения включён',
-            'Лучший в мире помощник (когда хочу)',
-            'Не будить до выходных',
-            'Съел и не заметил',
-            'Главный по чаю',
-            'Эксперт по откладыванию на потом',
-            'Улыбаюсь по расписанию',
-            'В душе — супергерой'
-        ]
-    };
-    
-    var randomIdea = ideas[mood][Math.floor(Math.random() * ideas[mood].length)];
-    
-    result.innerHTML = '<p style="margin-bottom:10px;">Идея для гравировки:</p><p style="font-size:1.8rem;color:var(--primary-light);font-style:italic;line-height:1.4;">«' + randomIdea + '»</p><button onclick="generateIdeas()" style="margin-top:15px;">🔄 Ещё идея</button>';
-    result.style.display = 'block';
-}
-
-document.getElementById('generatorModal').addEventListener('click', function(e) {
-    if (e.target === this) closeGenerator();
-});
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeGenerator();
-});
-</script>
-
-    <!-- КОНТАКТЫ -->
     <section id="contacts">
         <div class="container">
             <h2>Свяжитесь с нами</h2>
             <p class="section-desc">Выберите способ связи</p>
             <div class="contacts-wrapper">
-               <div>
-    <a href="mailto:kuznecova-tatyana@mail.ru" class="contact-link">
-        <div class="contact-item">
-            <span class="icon">📧</span>
-            <div>
-                <h3>Почта</h3>
-                <p>kuznecova-tatyana@mail.ru</p>
-            </div>
-        </div>
-    </a>
-    
-    <a href="https://vk.ru/laserdar" target="_blank" rel="noopener" class="contact-link">
-        <div class="contact-item">
-            <span class="icon">💬</span>
-            <div>
-                <h3>ВКонтакте</h3>
-                <p>vk.ru/laserdar</p>
-            </div>
-        </div>
-    </a>
-    
-    <a href="https://max.ru/channel_se14114036_biz" target="_blank" rel="noopener" class="contact-link">
-        <div class="contact-item">
-            <span class="icon">📱</span>
-            <div>
-                <h3>Max</h3>
-                <p>Канал LaserDar</p>
-            </div>
-        </div>
-    </a>
-    
-    <a href="https://www.ozon.ru/seller/laserdar/" target="_blank" rel="noopener" class="contact-link">
-        <div class="contact-item">
-            <span class="icon">🛒</span>
-            <div>
-                <h3>Ozon</h3>
-                <p>Магазин LaserDar</p>
-            </div>
-        </div>
-    </a>
-</div>
-
+                <div>
+                    <a href="mailto:kuznecova-tatyana@mail.ru" class="contact-link">
+                        <div class="contact-item">
+                            <span class="icon">📧</span>
+                            <div><h3>Почта</h3><p>kuznecova-tatyana@mail.ru</p></div>
+                        </div>
+                    </a>
+                    <a href="https://vk.ru/laserdar" target="_blank" rel="noopener" class="contact-link">
+                        <div class="contact-item">
+                            <span class="icon">💬</span>
+                            <div><h3>ВКонтакте</h3><p>vk.ru/laserdar</p></div>
+                        </div>
+                    </a>
+                    <a href="https://max.ru/channel_se14114036_biz" target="_blank" rel="noopener" class="contact-link">
+                        <div class="contact-item">
+                            <span class="icon">📱</span>
+                            <div><h3>Max</h3><p>Канал LaserDar</p></div>
+                        </div>
+                    </a>
+                    <a href="https://www.ozon.ru/seller/laserdar/" target="_blank" rel="noopener" class="contact-link">
+                        <div class="contact-item">
+                            <span class="icon">🛒</span>
+                            <div><h3>Ozon</h3><p>Магазин LaserDar</p></div>
+                        </div>
+                    </a>
+                </div>
                 <div class="form-container">
                     <h3>Оставить заявку</h3>
                     <form id="orderForm">
@@ -649,7 +309,6 @@ document.addEventListener('keydown', function(e) {
         </div>
     </section>
 
-    <!-- ПОДВАЛ -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -666,10 +325,10 @@ document.addEventListener('keydown', function(e) {
                 </div>
                 <div class="footer-col">
                     <h3>Контакты</h3>
-                    <a href="mailto:kuznecova-tatyana@mail.ru" style="position:relative;z-index:10;">📧 Почта</a>
-                    <a href="https://vk.ru/laserdar" target="_blank" rel="noopener" style="position:relative;z-index:10;">💬 ВКонтакте</a>
-                    <a href="https://max.ru/channel_se14114036_biz" target="_blank" rel="noopener" style="position:relative;z-index:10;">📱 Max</a>
-                    <a href="https://www.ozon.ru/seller/laserdar/" target="_blank" rel="noopener" style="position:relative;z-index:10;">🛒 Ozon</a>
+                    <a href="mailto:kuznecova-tatyana@mail.ru">📧 Почта</a>
+                    <a href="https://vk.ru/laserdar" target="_blank" rel="noopener">💬 ВКонтакте</a>
+                    <a href="https://max.ru/channel_se14114036_biz" target="_blank" rel="noopener">📱 Max</a>
+                    <a href="https://www.ozon.ru/seller/laserdar/" target="_blank" rel="noopener">🛒 Ozon</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -678,7 +337,127 @@ document.addEventListener('keydown', function(e) {
         </div>
     </footer>
 
+    <div class="modal" id="generatorModal">
+        <div class="modal-content">
+            <h3 id="modalTitle">Генератор</h3>
+            <div id="modalBody"></div>
+            <div class="modal-result" id="modalResult" style="display:none;"></div>
+            <button onclick="closeGenerator()" class="close-btn">Закрыть</button>
+        </div>
+    </div>
 
+    <script>
+        function switchGallery(category, el) {
+            document.querySelectorAll('.gallery-category').forEach(function(c) {
+                c.classList.remove('active');
+            });
+            document.querySelectorAll('.gallery-tab').forEach(function(t) {
+                t.classList.remove('active');
+            });
+            el.classList.add('active');
+            var target = document.getElementById(category);
+            if (target) {
+                target.classList.add('active');
+            }
+        }
+
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var name = document.getElementById('name').value;
+            var contact = document.getElementById('contact').value;
+            var message = document.getElementById('message').value;
+            window.location.href = 'mailto:kuznecova-tatyana@mail.ru?subject=' + encodeURIComponent('Заявка от ' + name) + '&body=' + encodeURIComponent('Имя: ' + name + '\nКонтакт: ' + contact + '\nЗаказ: ' + message);
+        });
+
+        function openGenerator(type) {
+            var modal = document.getElementById('generatorModal');
+            var title = document.getElementById('modalTitle');
+            var body = document.getElementById('modalBody');
+            var result = document.getElementById('modalResult');
+            result.style.display = 'none';
+            result.innerHTML = '';
+            
+            if (type === 'morse') {
+                title.textContent = '📡 Азбука Морзе';
+                body.innerHTML = '<p style="margin-bottom:15px;">Введите текст:</p><input type="text" id="morseInput" placeholder="Например: Привет" onkeyup="generateMorse()">';
+            } else if (type === 'qr') {
+                title.textContent = '📱 QR-код';
+                body.innerHTML = '<p style="margin-bottom:15px;">Введите ссылку или текст:</p><input type="text" id="qrInput" placeholder="https://..."><br><button onclick="generateQR()">Создать QR-код</button>';
+            } else if (type === 'initials') {
+                title.textContent = '✒️ Инициалы';
+                body.innerHTML = '<p style="margin-bottom:15px;">Введите имя и фамилию:</p><input type="text" id="initialsInput" placeholder="Иван Петров"><br><button onclick="generateInitials()">Создать</button>';
+            } else if (type === 'ideas') {
+                title.textContent = '💡 Идеи надписей';
+                body.innerHTML = '<p style="margin-bottom:15px;">Выберите настроение:</p><select id="ideasMood"><option value="love">❤️ Любовь</option><option value="family">👨‍👩‍👧 Семья</option><option value="friendship">🤝 Дружба</option><option value="motivation">🔥 Мотивация</option><option value="memory">🕊️ Память</option><option value="humor">😄 Юмор</option></select><br><button onclick="generateIdeas()">Сгенерировать</button>';
+            }
+            modal.classList.add('active');
+        }
+
+        function closeGenerator() {
+            document.getElementById('generatorModal').classList.remove('active');
+        }
+
+        function generateMorse() {
+            var text = document.getElementById('morseInput').value.toUpperCase();
+            var morse = {'А':'.-','Б':'-...','В':'.--','Г':'--.','Д':'-..','Е':'.','Ж':'...-','З':'--..','И':'..','Й':'.---','К':'-.-','Л':'.-..','М':'--','Н':'-.','О':'---','П':'.--.','Р':'.-.','С':'...','Т':'-','У':'..-','Ф':'..-.','Х':'....','Ц':'-.-.','Ч':'---.','Ш':'----','Щ':'--.-','Ъ':'--.--','Ы':'-.--','Ь':'-..-','Э':'..-..','Ю':'..--','Я':'.-.-','A':'.-','B':'-...','C':'-.-.','D':'-..','E':'.','F':'..-.','G':'--.','H':'....','I':'..','J':'.---','K':'-.-','L':'.-..','M':'--','N':'-.','O':'---','P':'.--.','Q':'--.-','R':'.-.','S':'...','T':'-','U':'..-','V':'...-','W':'.--','X':'-..-','Y':'-.--','Z':'--..','0':'-----','1':'.----','2':'..---','3':'...--','4':'....-','5':'.....','6':'-....','7':'--...','8':'---..','9':'----.',' ':' / '};
+            var resultText = '';
+            for (var i = 0; i < text.length; i++) {
+                resultText += (morse[text[i]] || text[i]) + ' ';
+            }
+            var result = document.getElementById('modalResult');
+            if (text) {
+                result.innerHTML = '<p style="font-size:1.3rem;letter-spacing:2px;color:var(--primary-light);">' + resultText.trim() + '</p>';
+                result.style.display = 'block';
+            } else {
+                result.style.display = 'none';
+            }
+        }
+
+        function generateQR() {
+            var text = document.getElementById('qrInput').value;
+            if (!text) { alert('Введите текст или ссылку'); return; }
+            var result = document.getElementById('modalResult');
+            result.innerHTML = '<img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=' + encodeURIComponent(text) + '" style="background:white;padding:10px;border-radius:8px;max-width:100%;">';
+            result.style.display = 'block';
+        }
+
+        function generateInitials() {
+            var name = document.getElementById('initialsInput').value.trim();
+            if (!name) { alert('Введите имя'); return; }
+            var parts = name.split(/\s+/).filter(function(p) { return p; });
+            var initials = '';
+            parts.forEach(function(p) { initials += p[0].toUpperCase(); });
+            var abbreviation = initials.split('').join('.') + '.';
+            var result = document.getElementById('modalResult');
+            result.innerHTML = '<p style="font-family:\'Great Vibes\',cursive;font-size:3.5rem;color:var(--primary-light);line-height:1.2;">' + initials + '</p><p style="font-family:\'Playfair Display\',serif;font-size:2rem;letter-spacing:5px;color:var(--text-dark);margin-top:15px;">' + abbreviation + '</p>';
+            result.style.display = 'block';
+        }
+
+        function generateIdeas() {
+            var mood = document.getElementById('ideasMood').value;
+            var result = document.getElementById('modalResult');
+            
+            var ideas = {
+                love: ['Навсегда','Ты и я','Люблю тебя','Вместе навсегда','Моя половинка','Сердце моё','Навеки твой(я)','Ты — моё всё','Моё сердце принадлежит тебе','Две души — одно сердце','Настоящая любовь','Люблю, чту, берегу','Ты — моя жизнь','Расстояние бессильно','Я всегда рядом','Моя любовь всегда с тобой'],
+                family: ['Семья — это всё','Мой дом','Мама и папа','Родные люди','Семейные узы','Дом там, где семья','Наша крепость','Семья — моя опора','Любовь и забота нашей семьи','С семьёй всё по плечу','Наши традиции — наша сила','В кругу самых близких','Сердце семьи бьётся в унисон','Семья — это мы','Тёплые моменты с родными','Моя семья — моя гордость','Рука об руку сквозь годы'],
+                friendship: ['Лучшие друзья','Дружба навек','Мой друг','Вместе навсегда','Не разлей вода','Спасибо, что ты есть','Друзья — это семья'],
+                motivation: ['Ты справишься','Действуй прямо сейчас','Маленькие шаги — большой результат','Верь в себя','Сегодня — лучший день','Ты сильнее, чем думаешь','Двигайся вперёд','Не бойся пробовать','Каждый день — шанс','Ты на верном пути','Сделай первый шаг','Всё получится','Не сдавайся никогда','Ты уже ближе к цели','Время действовать','Твой прогресс важен','Ты можешь больше','Вдох, выдох, действуй','Сегодня будет лучше','Ты — автор своей истории','Стань лучшей версией себя','Преграды — это опыт','Ты достоин успеха','Иди, пока горит огонь','Мечты становятся реальностью','Начни с малого','Ты уже делаешь достаточно','Победа начинается с шага','Не оглядывайся назад','Сила — в постоянстве','Ты не один','Сегодня — твой день','Доверься процессу','Рост требует смелости','Ты создаёшь своё будущее','Не сравнивай свой старт с чужой серединой','Твоя энергия — твоя сила','Продолжай, даже если трудно','Ты уже победил, начав','Пусть действия говорят громче слов','Каждый день — новая возможность','Ты умеешь преодолевать','Держи фокус на цели','Трудности делают сильнее','Верь, даже когда страшно','Ты способен на большее','Не жди идеального момента','Твой путь уникален','Делай, а не думай бесконечно','Ты заслуживаешь счастья','Прогресс — это движение','Будь добрее к себе','Сегодня ты ближе, чем вчера','Сила в твоих руках','Не позволяй страху решать','Ты — главный герой своей жизни','Маленькие победы важны','Действуй, пока есть желание','Ты меняешь мир вокруг','Верь в свой путь','Не останавливайся на полпути','Ты — источник своей силы','Каждый день — новый шанс','Смелость — это действие','Ты уже на пути к успеху','Пусть каждый шаг будет осознанным','Ты можешь всё, что задумал','Не бойся ошибаться','Твоя история только начинается','Двигайся, даже если медленно','Ты сильнее своих сомнений','Верь в свои возможности','Сегодня — день возможностей','Ты строишь своё будущее','Не теряй веру в себя','Каждый шаг — это победа','Ты достоин всего лучшего','Пусть мечты ведут вперёд','Ты можешь это сделать','Не смотри на чужие темпы','Твоя сила — в упорстве','Сегодня ты становишься лучше','Верь в свою уникальность','Ты ближе к мечте','Не бойся перемен','Ты создаёшь свою реальность','Пусть каждый день будет шагом вперёд','Ты — твоё главное достижение','Не откладывай жизнь на потом','Ты умеешь справляться','Верь в свой потенциал','Сегодня — время начать','Ты делаешь мир ярче','Не сравнивай себя с другими','Твоя сила — в действии','Ты заслуживаешь успеха','Пусть каждый день приносит рост','Ты можешь преодолеть всё','Верь в свой свет','Ты — на правильном пути'],
+                memory: ['Помню и люблю','Навсегда в сердце','Ты всегда со мной','Не забывай меня','В сердце навсегда'],
+                humor: ['Гравировка — это навсегда','Не теряй меня','Я же говорил(а)','Лучший(ая) в мире','Сделано с любовью','Не суди строго','Это всё моё','Без кофе — не человек','Тише, я думаю!','Официально в отпуске','Мастер неловких пауз','Уровень терпения: почти ноль','Здесь был и ушёл','Осторожно: ворчу, но люблю','Режим энергосбережения включён','Лучший в мире помощник (когда хочу)','Не будить до выходных','Съел и не заметил','Главный по чаю','Эксперт по откладыванию на потом','Улыбаюсь по расписанию','В душе — супергерой']
+            };
+            
+            var randomIdea = ideas[mood][Math.floor(Math.random() * ideas[mood].length)];
+            result.innerHTML = '<p style="margin-bottom:10px;">Идея для гравировки:</p><p style="font-size:1.8rem;color:var(--primary-light);font-style:italic;line-height:1.4;">«' + randomIdea + '»</p><button onclick="generateIdeas()" style="margin-top:15px;">🔄 Ещё идея</button>';
+            result.style.display = 'block';
+        }
+
+        document.getElementById('generatorModal').addEventListener('click', function(e) {
+            if (e.target === this) closeGenerator();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeGenerator();
+        });
+    </script>
 
 </body>
 </html>
