@@ -56,9 +56,9 @@
         #process .gallery-item video { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
         .gallery-item:hover { border-color: var(--primary); }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
-        .gallery-category { display: none; }
-        .gallery-category.active { display: grid; }
-        #process.active { display: flex; justify-content: center; }
+        .gallery-category { display: none !important; }
+        .gallery-category.active { display: grid !important; }
+         #process.gallery-category.active { display: flex !important; justify-content: center; }
         
         .about-section { background: var(--bg-light); }
         .about-content { max-width: 800px; margin: 0 auto; text-align: left; }
@@ -347,19 +347,30 @@
     </div>
 
     <script>
-        function switchGallery(category, el) {
-            document.querySelectorAll('.gallery-category').forEach(function(c) {
-                c.classList.remove('active');
-            });
-            document.querySelectorAll('.gallery-tab').forEach(function(t) {
-                t.classList.remove('active');
-            });
-            el.classList.add('active');
-            var target = document.getElementById(category);
-            if (target) {
-                target.classList.add('active');
-            }
+       function switchGallery(category, el) {
+    // Скрыть все
+    var allCategories = document.querySelectorAll('.gallery-category');
+    for (var i = 0; i < allCategories.length; i++) {
+        allCategories[i].classList.remove('active');
+        allCategories[i].style.display = 'none';
+    }
+    
+    var allTabs = document.querySelectorAll('.gallery-tab');
+    for (var i = 0; i < allTabs.length; i++) {
+        allTabs[i].classList.remove('active');
+    }
+    
+    // Показать нужную
+    el.classList.add('active');
+    var target = document.getElementById(category);
+    if (target) {
+        target.classList.add('active');
+        target.style.display = 'grid';
+        if (category === 'process') {
+            target.style.display = 'flex';
         }
+    }
+}
 
         document.getElementById('orderForm').addEventListener('submit', function(e) {
             e.preventDefault();
