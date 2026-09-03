@@ -314,24 +314,16 @@
                         </div>
                     </a>
                 </div>
-                <div class="form-container">
-                    <h3>Оставить заявку</h3>
-                    <form id="orderForm">
-                        <div class="form-group">
-                            <label>Имя *</label>
-                            <input type="text" id="name" required placeholder="Как к вам обращаться?">
-                        </div>
-                        <div class="form-group">
-                            <label>Email или телефон *</label>
-                            <input type="text" id="contact" required placeholder="Для ответа">
-                        </div>
-                        <div class="form-group">
-                            <label>Заказ *</label>
-                            <textarea id="message" required placeholder="Опишите идею..."></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Отправить</button>
-                    </form>
-                </div>
+              <div class="form-container">
+    <h3>Оставить заявку</h3>
+    <p style="margin-bottom:20px;color:var(--text-light);">Напишите нам удобным способом:</p>
+    
+    <a href="mailto:kuznecova-tatyana@mail.ru?subject=Заявка с сайта LaserDar" style="display:block;text-align:center;text-decoration:none;padding:15px;background:var(--primary);color:white;border-radius:8px;font-weight:600;margin-bottom:15px;">📧 Написать на почту</a>
+    
+    <a href="https://vk.ru/laserdar" target="_blank" rel="noopener" style="display:block;text-align:center;text-decoration:none;padding:15px;background:#0077FF;color:white;border-radius:8px;font-weight:600;margin-bottom:15px;">💬 Написать ВКонтакте</a>
+    
+    <a href="https://max.ru/channel_se14114036_biz" target="_blank" rel="noopener" style="display:block;text-align:center;text-decoration:none;padding:15px;background:#8B00FF;color:white;border-radius:8px;font-weight:600;">📱 Написать в Max</a>
+</div>
             </div>
         </div>
     </section>
@@ -398,14 +390,6 @@
         }
     }
 }
-
-        document.getElementById('orderForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            var name = document.getElementById('name').value;
-            var contact = document.getElementById('contact').value;
-            var message = document.getElementById('message').value;
-            window.location.href = 'mailto:kuznecova-tatyana@mail.ru?subject=' + encodeURIComponent('Заявка от ' + name) + '&body=' + encodeURIComponent('Имя: ' + name + '\nКонтакт: ' + contact + '\nЗаказ: ' + message);
-        });
 
         function openGenerator(type) {
             var modal = document.getElementById('generatorModal');
